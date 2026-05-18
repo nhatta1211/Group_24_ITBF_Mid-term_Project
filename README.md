@@ -54,14 +54,16 @@ ai-financial-agent/
 ---
 
 ## Quickstart
+
 ```bash
 # 1. Clone the repo
+```
 
 **Option A — Using Git (recommended):**
 ```bash
 git clone https://github.com/nhatta1211/ITBF_Mid-term_Project.git
 cd ITBF_Mid-term_Project
-``
+```
 
 **Option B — Download ZIP (no Git required):**
 1. Go to https://github.com/nhatta1211/ITBF_Mid-term_Project
@@ -69,12 +71,7 @@ cd ITBF_Mid-term_Project
 3. Extract the ZIP file
 4. Open a terminal inside the extracted folder before continuing
 
-**Option B — Download ZIP (no Git required):**
-1. Go to https://github.com/nhatta1211/ITBF_Mid-term_Project
-2. Click the green **Code** button → **Download ZIP**
-3. Extract the ZIP file
-4. Open a terminal inside the extracted folder before continuing
-
+```bash
 # 2. Create and activate a virtual environment
 python -m venv my_env
 my_env\Scripts\activate        # Windows
@@ -86,9 +83,6 @@ pip install -r requirements.txt
 # 4. Set up API keys
 copy .env.example .env        # Windows
 # cp .env.example .env        # macOS / Linux
-# This creates your .env file from the template.
-# Open .env and fill in your actual API keys.
-# (See Configuration section for where to get them)
 
 # 5. Run the pipeline
 python -m src.main
