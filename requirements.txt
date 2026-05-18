@@ -1,0 +1,31 @@
+# ─────────────────────────────────────────────
+# requirements.txt
+# Install all dependencies with:
+#   pip install -r requirements.txt
+# ─────────────────────────────────────────────
+
+# Fetch financial data from Yahoo Finance (free, no API key needed)
+yfinance==0.2.51
+
+# Work with tables of data (like Excel, but in Python)
+pandas==2.2.3
+
+# Draw charts and graphs
+matplotlib==3.9.4
+seaborn==0.13.2
+
+# Talk to the Groq API (free LLM — much cheaper than OpenAI)
+groq==0.28.0
+
+# Load secret keys from the .env file safely
+python-dotenv==1.1.0
+
+# Show a progress bar when fetching data
+tqdm==4.67.1
+
+# Make HTTP requests (used internally by yfinance)
+requests==2.32.3
+
+# Scientific computing — used for skewness calculation (ai_analysis.py)
+# and regression line in Chart 20 (visualization.py, Phase 5)
+scipy==1.17.1
