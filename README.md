@@ -54,7 +54,7 @@ ai-financial-agent/
 ---
 
 ## Quickstart
-
+```bash
 # 1. Clone the repo
 
 **Option A — Using Git (recommended):**
