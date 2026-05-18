@@ -35,8 +35,8 @@ ai-financial-agent/
 │   ├── cleaning.py            # Module 2 — cleans and engineers features
 │   ├── visualization.py       # Module 3 — generates charts
 │   ├── ai_analysis.py         # Module 4 — AI reports via Groq
-│   └── main.py                # Master pipeline runner
-│
+│ 
+├── main.py                    # Master pipeline runner
 ├── data/                      # Raw CSVs (auto-created by Module 1)
 ├── output/                    # Cleaned CSVs + AI reports (auto-created)
 ├── charts/                    # PNG charts (auto-created by Module 3)
@@ -45,6 +45,8 @@ ai-financial-agent/
 ├── .env.example               # Key template — safe to commit
 ├── requirements.txt           # Pinned dependencies
 ├── requirements-lock.txt      # Full pip freeze snapshot
+├── README.md                  # This file
+├── .gitignore
 ```
 
 > `data/`, `output/`, and `charts/` are excluded from Git and created automatically on first run.
@@ -53,10 +55,25 @@ ai-financial-agent/
 
 ## Quickstart
 
-```bash
 # 1. Clone the repo
+
+**Option A — Using Git (recommended):**
+```bash
 git clone https://github.com/nhatta1211/ITBF_Mid-term_Project.git
 cd ITBF_Mid-term_Project
+``
+
+**Option B — Download ZIP (no Git required):**
+1. Go to https://github.com/nhatta1211/ITBF_Mid-term_Project
+2. Click the green **Code** button → **Download ZIP**
+3. Extract the ZIP file
+4. Open a terminal inside the extracted folder before continuing
+
+**Option B — Download ZIP (no Git required):**
+1. Go to https://github.com/nhatta1211/ITBF_Mid-term_Project
+2. Click the green **Code** button → **Download ZIP**
+3. Extract the ZIP file
+4. Open a terminal inside the extracted folder before continuing
 
 # 2. Create and activate a virtual environment
 python -m venv my_env
