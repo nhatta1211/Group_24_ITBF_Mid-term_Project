@@ -62,13 +62,13 @@ ai-financial-agent/
 **Option A — Using Git (recommended):**
 
 ```bash
-git clone https://github.com/nhatta1211/ITBF_Mid-term_Project.git
-cd ITBF_Mid-term_Project
+git clone https://github.com/nhatta1211/Group_24_ITBF_Mid-term_Project.git
+cd Group_24_ITBF_Mid-term_Project
 ```
 
 **Option B — Download ZIP (no Git required):**
 
-1. Go to https://github.com/nhatta1211/ITBF_Mid-term_Project
+1. Go to https://github.com/nhatta1211/Group_24_ITBF_Mid-term_Project
 2. Click the green **Code** button → **Download ZIP**
 3. Extract the ZIP file
 4. Open a terminal inside the extracted folder before continuing
