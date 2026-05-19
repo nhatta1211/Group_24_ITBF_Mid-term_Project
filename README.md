@@ -53,48 +53,68 @@ ai-financial-agent/
 
 ---
 
-## Quickstart
+## 🚀 Quickstart
 
-```bash
-# 1. Clone the repo
-```
+---
+
+### 📥 Step 1 — Clone the Repository
 
 **Option A — Using Git (recommended):**
+
 ```bash
 git clone https://github.com/nhatta1211/ITBF_Mid-term_Project.git
 cd ITBF_Mid-term_Project
 ```
 
 **Option B — Download ZIP (no Git required):**
+
 1. Go to https://github.com/nhatta1211/ITBF_Mid-term_Project
 2. Click the green **Code** button → **Download ZIP**
 3. Extract the ZIP file
 4. Open a terminal inside the extracted folder before continuing
 
+---
+
+### 🐍 Step 2 — Create & Activate Virtual Environment
+
 ```bash
-# 2. Create and activate a virtual environment
 python -m venv my_env
 my_env\Scripts\activate        # Windows
 # source my_env/bin/activate   # macOS / Linux
+```
 
-# 3. Install dependencies
+---
+
+### 📦 Step 3 — Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-# 4. Set up API keys
+---
+
+### 🔑 Step 4 — Set Up API Keys
+
+```bash
 copy .env.example .env        # Windows
 # cp .env.example .env        # macOS / Linux
-# Open .env and fill in your actual API keys.
-# See the Configuration section below for step-by-step instructions on getting each key.
+```
 
-# 5. Run the pipeline
+> Open `.env` and fill in your actual API keys.  
+> See the [Configuration](#configuration) section for step-by-step instructions on getting each key.
+
+---
+
+### ▶️ Step 5 — Run the Pipeline
+
+```bash
 python main.py
 ```
-> **Note:** If Step 5 fails with `yfinance` returning 0 rows, update yfinance first:
+
+> ⚠️ **Note:** If this fails with `yfinance` returning 0 rows, run:
 > ```bash
 > pip install --upgrade yfinance
 > ```
----
-
 ## Installation
 
 **Requirements:** Python 3.10+, internet connection.
