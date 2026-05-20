@@ -10,10 +10,10 @@ AI-Powered Financial Data Agent in sequence:
   Step 4 → Module 4: AI Analysis       (generates AI text reports)
 
 Run the full pipeline with:
-    python -m src.main
+    python main.py
 
 Skip Step 1 if CSV files already exist (saves ~30s during development):
-    python -m src.main --skip-collection
+    python main.py --skip-collection
 
 Each step is independent. If one step fails, the pipeline stops
 and tells you exactly what went wrong and how to fix it.
@@ -515,8 +515,8 @@ def run_pipeline(skip_collection: bool = False, watch_run: int = None):
 
 # ──────────────────────────────────────────────
 # CLI ARGUMENT PARSING
-# Runs when: python -m src.main
-# Runs when: python -m src.main --skip-collection
+# Runs when: python main.py
+# Runs when: python main.py --skip-collection
 # ──────────────────────────────────────────────
 
 def parse_args():
@@ -535,9 +535,9 @@ def parse_args():
         description="AI-Powered Financial Data Agent — Full Pipeline",
         epilog=(
             "Examples:\n"
-            "  python -m src.main                    # full pipeline (single run)\n"
-            "  python -m src.main --skip-collection  # skip Step 1 (use existing CSVs)\n"
-            "  python -m src.main --watch 3600       # run every hour (3600 seconds)"
+            "  python main.py                    # full pipeline (single run)\n"
+            "  python main.py --skip-collection  # skip Step 1 (use existing CSVs)\n"
+            "  python main.py --watch 3600       # run every hour (3600 seconds)"
         ),
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
@@ -569,7 +569,7 @@ def parse_args():
 
 # ──────────────────────────────────────────────
 # STANDALONE ENTRY POINT
-# Runs when: python -m src.main
+# Runs when: python main.py
 # ──────────────────────────────────────────────
 
 if __name__ == "__main__":
