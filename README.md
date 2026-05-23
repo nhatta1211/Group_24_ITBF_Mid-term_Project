@@ -82,9 +82,18 @@ python -m venv my_env
 my_env\Scripts\activate        # Windows
 # source my_env/bin/activate   # macOS / Linux
 ```
-
 ---
-
+> 💡 **Activation differs by terminal and OS.** Use the line that matches your setup:
+> ```bash
+> my_env\Scripts\activate          # Windows — PowerShell or CMD
+> source my_env/bin/activate       # macOS / Linux
+> ```
+> **Windows PowerShell users:** if activation is blocked with a message about scripts being *disabled on this system* (a `PSSecurityException` / `UnauthorizedAccess` error), Windows is preventing scripts from running by default. Run this once, then activate again:
+> ```powershell
+> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+> ```
+> If you prefer not to change the policy, open **Command Prompt (CMD)** instead of PowerShell and run `my_env\Scripts\activate.bat`. See [Troubleshooting](#troubleshooting) for all options.
+---
 ### 📦 Step 3 — Install Dependencies
 
 ```bash
@@ -261,6 +270,27 @@ Virtual environment is not active, or you are not in the project root folder.
 my_env\Scripts\activate
 python main.py
 ```
+**`activate.ps1 cannot be loaded because running scripts is disabled` (PowerShell)**
+Windows blocks script execution by default (`Restricted` policy). This is a Windows security setting, not a project issue, so it appears only on machines where the policy has never been relaxed. Pick one fix:
+
+```powershell
+# Option 1 (recommended) — allow local scripts for your user, run once:
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+my_env\Scripts\activate
+
+# Option 2 — current terminal only, resets when closed:
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+my_env\Scripts\activate
+```
+
+Or skip PowerShell entirely and use Command Prompt, which the policy does not affect:
+
+```cmd
+my_env\Scripts\activate.bat
+```
+
+> Avoid `Unrestricted` or `-Scope LocalMachine` — these lower security system-wide. `RemoteSigned` + `CurrentUser` is the safest setting that resolves this.
+
 
 **Pipeline aborts — "Required files are missing"**
 Running `--skip-collection` but `data/` is empty.
